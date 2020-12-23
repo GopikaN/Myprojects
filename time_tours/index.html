@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           text-align: center;
+           margin-top: 50px;
+           width:400px;
+           margin-left: 400px;
+          
+        }
+        input{
+            display: flex;
+            float: right;
+            font-weight: bold;
+            left:40px;
+        }
+        #addhobbies{
+            
+            border:none;
+            margin-left:302px;
+            background-color: white;
+        }
+        label{
+            font-weight: bold;
+            display: flex;
+            float: left;
+        }
+        .box{
+            border: 3px solid black;
+            width:600px;
+            margin:auto;
+            padding:15px;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <label for="name">Name</label>
+        <input type="text" id="name" onClick="showName()" ><br><br>
+        <label for="qualification">Qualification</label>
+        <input type="text" id="qualification" onClick="showQualification()"><br><br>
+        <label for="hobbies">Hobbies</label>
+        <div id="hobbies">
+            
+            <input type="text" id="hobb" onClick="showHobby()" ><br><br>
+        </div>
+        <button id="addhobbies" onClick=onAdd()>+Add Hobbies</button>
+    </div>
+    <div class="box">
+        <p>I, <span id="name1"></span>, would like to apply for an internship at your organisation.</p>
+
+           <p>My Qualification is <span id=qualification1></span>.</p> 
+
+           <p>My hobbies are <span id="showHobby1"></span><span id=showHobby2></span><span id=showhobby3></span>
+            (If user enters only two hobbies then it should be _____ & _____, if user enters only one hobby it should be______.
+            Make sure punctuations are given correctly)</p>
+           
+           <p>Thanking you,</p>
+           <p>Your Sincerely</p>
+    </div>
+    
+  <script>
+      var i=0;
+      function onAdd(){
+      if(i<2) {   
+      var input = document.createElement("input");
+      input.setAttribute('type', 'text');
+      input.setAttribute('id', 'hobb');
+      var parent = document.getElementById("hobbies");
+      var br1=document.getElementById("br");
+      parent.appendChild(input);
+     
+      i+=1;
+      }
+      }
+     function showName(){
+        var message = document.getElementById("name").value;
+        name1.innerHTML= message;
+        
+     }
+     function showQualification(){
+        var message = document.getElementById("qualification").value;
+        qualification1.innerHTML= message;
+        
+     }
+    
+     function showHobby(){
+        var message = document.getElementById("hobb").value;
+
+        showHobby1.innerHTML= message+'.';
+       
+        
+     }
+    
+   
+  
+
+      
+  </script>
+</body>
+</html>

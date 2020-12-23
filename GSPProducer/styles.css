@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+  }
+.bg {
+    position: relative;
+    background-image: url("Bg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container {
+    
+    max-width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.85;
+    display: block;
+    overflow: auto;
+}
+.logo {
+    left:50%;
+    display: block;
+    width:100%;
+    text-align: center;
+  }
+.header{
+   
+    color:rgb(78, 9, 9);
+    text-align: center;
+}
+#subHeader{
+    text-align: center;
+}
+#text1{
+    width:70%;
+    margin: auto;
+   
+}
+#text2{
+ background-color: rgb(92, 8, 8);
+ color:white;
+ text-align: center;
+ border-radius: 10px;
+}
+.giftImage{
+   text-align: center;
+   width: 100%;
+   height: auto;
+   margin-top: 10px;
+}
+#gift{
+    border-radius: 10px;
+}
+.card .card-body .message {
+    padding-left: 80px;
+    
+  
+  }
+  .card{
+      max-width:80%;
+      margin:auto;
+      margin-top: 5px;
+     
+  }
+  .card .card-body .actions {
+    margin-top: 5px;
+  }
+ 
